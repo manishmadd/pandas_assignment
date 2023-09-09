@@ -1,0 +1,78 @@
+import pandas as pd
+import numpy as np
+
+# Q1: Load a CSV file into a Pandas DataFrame
+df = pd.read_csv('file.csv')
+
+# Q2: Check the data type of a column
+column_data_type = df['column_name'].dtype
+
+# Q3: Select rows based on a condition
+selected_rows = df[df['column_name'] > value]
+
+# Q4: Rename columns
+df.rename(columns={'old_name': 'new_name'}, inplace=True)
+
+# Q5: Drop columns
+df.drop(columns=['column_name'], inplace=True)
+
+# Q6: Find unique values in a column
+unique_values = df['column_name'].unique()
+
+# Q7: Find the number of missing values in each column
+missing_values = df.isna().sum()
+
+# Q8: Fill missing values with a specific value
+df['column_name'].fillna(value, inplace=True)
+
+# Q9: Concatenate two DataFrames
+concatenated_df = pd.concat([df1, df2])
+
+# Q10: Merge two DataFrames on a specific column
+merged_df = pd.merge(df1, df2, on='common_column')
+
+# Q11: Group data and apply aggregation
+grouped = df.groupby('column_name')['numeric_column'].mean()
+
+# Q12: Pivot a DataFrame
+pivot_df = df.pivot(index='index_column', columns='column_to_pivot')
+
+# Q13: Change the data type of a column
+df['column_name'] = df['column_name'].astype(new_data_type)
+
+# Q14: Sort a DataFrame by a specific column
+sorted_df = df.sort_values(by='column_name', ascending=False)
+
+# Q15: Create a copy of a DataFrame
+df_copy = df.copy()
+
+# Q16: Filter rows by multiple conditions
+filtered_df = df[(df['condition1']) & (df['condition2'])]
+
+# Q17: Calculate the mean of a column
+mean_value = df['column_name'].mean()
+
+# Q18: Calculate the standard deviation of a column
+std_deviation = df['column_name'].std()
+
+# Q19: Calculate the correlation between two columns
+correlation = df['column1'].corr(df['column2'])
+
+# Q20: Select specific columns in a DataFrame
+selected_columns = df[['column1', 'column2']]
+
+# Q21: Select specific rows in a DataFrame
+selected_row = df.loc[row_label]
+
+# Q22: Sort a DataFrame by a specific column
+sorted_df = df.sort_values(by='column_name', ascending=False)
+
+# Q23: Create a new column based on the values of another column
+df['new_column'] = df['column1'] + df['column2']
+
+# Q24: Remove duplicates from a DataFrame
+deduplicated_df = df.drop_duplicates()
+
+# Q25: Difference between .loc and .iloc
+value_loc = df.loc['row_label', 'column_label']
+value_iloc = df.iloc[0, 0]
